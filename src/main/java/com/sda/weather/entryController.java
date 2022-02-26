@@ -1,6 +1,6 @@
 package com.sda.weather;
 
-public class entryController {
+public class entryController { // todo rename to LocationController
 
 
 }

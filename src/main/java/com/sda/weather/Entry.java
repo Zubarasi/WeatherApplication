@@ -9,20 +9,20 @@ import java.time.Instant;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-    @Data
-    @Entity
-    @NoArgsConstructor
-    @Table(name = "entry")
-    class Entry {
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "entry")
+class Entry { // todo this is a proper name? I think it's a Location
 
-        @Id
-        @GeneratedValue(strategy = IDENTITY)
-        private Long id;
-        @Column(nullable = false)
-        private String city;
-        private String country;
-        private String region;
-        private float longitudeAndLatitdue;
-        private Instant createdDate;
-    }
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    private Long id;
+    @Column(nullable = false)
+    private String city;
+    private String country; // todo nullable?
+    private String region;
+    private float longitudeAndLatitdue; // todo we want to split this filed
+    private Instant createdDate; // todo it is unnecessary, just remove it
+}
 
