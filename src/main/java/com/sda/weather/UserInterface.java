@@ -27,4 +27,21 @@ public class UserInterface {
     }
 }
 
+
+    private void createEntry() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nazwa miastra: ");
+        String city = scanner.nextLine();
+        System.out.println("Nazwa kraju: ");
+        String country = scanner.nextLine();
+        System.out.println("Nazwa regionu: ");
+        String region = scanner.nextLine();
+        System.out.println("Długość i szerokość geograficzna: ");
+        float longitudeAndLattidue = scanner.nextFloat();
+
+        // POST: /entry
+        String request = String.format("{\"title\":\"%s\",\"content\":\"%s\"}", city, country, region, longitudeAndLattidue);
+        System.out.println("Wysylany json: " + request);
+    }
+
 }
