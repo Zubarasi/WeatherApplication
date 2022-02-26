@@ -9,7 +9,7 @@ public class UserInterface {
 
         Scanner scanner = new Scanner(System.in);
     while (true) {
-        System.out.println("Witaj w elektronicznym dzienniku, co chcesz zrobić?");
+        System.out.println("Co chcesz zrobić?");
         System.out.println("1. Dodać nowy wpis");
         System.out.println("2. Odczytać wszystkie wpisy");
         System.out.println("0. Zamknąć aplikację");
