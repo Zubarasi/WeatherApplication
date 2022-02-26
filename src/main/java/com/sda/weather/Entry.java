@@ -1,6 +1,7 @@
 package com.sda.weather;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -10,6 +11,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
     @Data
     @Entity
+    @NoArgsConstructor
     @Table(name = "entry")
     class Entry {
 
