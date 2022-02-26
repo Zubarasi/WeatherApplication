@@ -21,17 +21,12 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.3.7.Final</version>
+            <version>5.6.4.Final</version>
         </dependency>
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>javax.persistence-api</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.lbovolini</groupId>
-            <artifactId>ObjectMapper</artifactId>
-            <version>0.2.3</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
         </dependency>
     </dependencies>
 
