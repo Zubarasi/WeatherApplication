@@ -10,8 +10,8 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Co chcesz zrobić?");
-            System.out.println("1. Dodać nowy wpis"); // todo Location
-            System.out.println("2. Odczytać wszystkie wpisy"); // todo Location
+            System.out.println("1. Dodać nową lokacje");
+            System.out.println("2. Odczytać wszystkie lokacje");
             System.out.println("0. Zamknąć aplikację");
 
             int option = scanner.nextInt();
@@ -27,20 +27,22 @@ public class UserInterface {
         }
     }
 
-    private void createEntry() { // todo rename to createLocation
+    private void createLocation() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nazwa miastra: "); // todo miasta
+        System.out.println("Nazwa miasta: ");
         String city = scanner.nextLine();
         System.out.println("Nazwa kraju: ");
         String country = scanner.nextLine();
         System.out.println("Nazwa regionu: ");
         String region = scanner.nextLine();
-        System.out.println("Długość i szerokość geograficzna: "); // todo 2 separated values
-        float longitudeAndLattidue = scanner.nextFloat();
+        System.out.println("Długość geograficzna: "); // todo 2 separated values
+        float longitude = scanner.nextFloat();
+        System.out.println("Szerokość geograficzna");
+        float lattidue = scanner.nextFloat();
 
         // POST: /entry
         // todo in progress...
-        String request = String.format("{\"title\":\"%s\",\"content\":\"%s\"}", city, country, region, longitudeAndLattidue);
+        String request = String.format("{\"city\":\"%s\",\"country\":\"%s\",\"region\":\"%s\",\"longitude\":\"%s\",\"lattidue\"}", city, country, region, longitude,lattidue);
         System.out.println("Wysylany json: " + request);
         // todo use new LocationController
     }
